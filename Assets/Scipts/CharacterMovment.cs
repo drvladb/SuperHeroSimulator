@@ -8,7 +8,7 @@ public class CharacterMovment : MonoBehaviour
     public GameObject bullet;
     float BulletDelay;
     private Rigidbody rb;
-    public 
+    public GameObject bulletspawn;
     // Start is called before the first frame update
     void Start()
     { 
@@ -72,9 +72,9 @@ public class CharacterMovment : MonoBehaviour
         
         if (Input.GetKey(KeyCode.E))
             {
-                if (BulletDelay >= 60f)
-                {
-                    GameObject bullet1 = Instantiate(bullet.transform.GetChild(0).gameObject, this.transform.position + Vector3.up * 2.5f + this.transform.forward * -3, Quaternion.identity);
+                if (BulletDelay >= 60f)//bullet.transform.GetChild(0).gameObject
+            {       //this.transform.position + Vector3.up * 2.5f + this.transform.forward * -3
+                    GameObject bullet1 = Instantiate(bullet, bulletspawn.transform.position, Quaternion.identity);
                     bullet1.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, -1f) * -750);
                     Destroy(bullet1.gameObject, 3);
                     BulletDelay = 0;
