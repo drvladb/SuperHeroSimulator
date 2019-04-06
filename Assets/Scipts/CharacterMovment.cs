@@ -8,6 +8,7 @@ public class CharacterMovment : MonoBehaviour
     public GameObject bullet;
     float BulletDelay;
     private Rigidbody rb;
+    public 
     // Start is called before the first frame update
     void Start()
     { 
@@ -17,24 +18,59 @@ public class CharacterMovment : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        Debug.Log(rb.velocity.magnitude);
-            if (Input.GetKey(KeyCode.UpArrow))
+        //Debug.Log(rb.velocity.magnitude);
+        if (Input.GetKey(KeyCode.W))
+        {
+            if (rb.velocity.magnitude < 10)
+            {
+                //rb.AddForce(new Vector3(0, -18, 0));
+                this.gameObject.transform.position += this.gameObject.transform.forward * 1;
+            }
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            if (rb.velocity.magnitude < 10)
+            {
+                //rb.AddForce(new Vector3(0, -18, 0));
+                this.gameObject.transform.position +=this.gameObject.transform.right * -1;
+            }
+        }
+        if (Input.GetKey(KeyCode.S))
+        {
+            if (rb.velocity.magnitude < 10)
+            {
+                //rb.AddForce(new Vector3(0, -18, 0));
+                this.gameObject.transform.position += this.gameObject.transform.forward * -1;
+            }
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            if (rb.velocity.magnitude < 10)
+            {
+                //rb.AddForce(new Vector3(0, -18, 0));
+                this.gameObject.transform.position +=  this.gameObject.transform.right * 1;
+            }
+        }
+        if (Input.GetKey(KeyCode.UpArrow))
             {
                 if (rb.velocity.magnitude < 10)
                 {
-                    rb.AddForce(new Vector3(0, 18, 0));
+                //rb.AddForce(new Vector3(0, 18, 0));
+                this.gameObject.transform.position += new Vector3(0, 0.1f, 0);
                 }
             }
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 if (rb.velocity.magnitude < 10)
                 {
-                    rb.AddForce(new Vector3(0, -18, 0));
+                //rb.AddForce(new Vector3(0, -18, 0));
+                this.gameObject.transform.position += new Vector3(0, -0.1f, 0);
                 }
             }
-            if (Input.GetKey(KeyCode.S))
+        
+        if (Input.GetKey(KeyCode.E))
             {
                 if (BulletDelay >= 60f)
                 {
