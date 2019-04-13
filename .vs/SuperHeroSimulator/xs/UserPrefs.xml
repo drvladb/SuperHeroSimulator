@@ -1,15 +1,14 @@
 ﻿<Properties StartupConfiguration="{C3E15248-4586-8499-0E29-837D03316B71}|">
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scipts/CharacterMovment.cs">
     <Files>
-      <File FileName="Assets/Scipts/CharacterMovment.cs" Line="58" Column="18" />
+      <File FileName="Assets/Scipts/CharacterMovment.cs" Line="78" Column="96" />
       <File FileName="../TutorialApp/Assets/Scripts/CharacterMovement.cs" Line="54" Column="9" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="SuperHeroSimulator" expanded="True">
-            <Node name="Assets" expanded="True">
-              <Node name="Material" selected="True" />
+            <Node name="Assets" expanded="True" selected="True">
               <Node name="Scipts" expanded="True" />
             </Node>
           </Node>

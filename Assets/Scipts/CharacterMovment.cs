@@ -75,7 +75,7 @@ public class CharacterMovment : MonoBehaviour
                 if (BulletDelay >= 60f)//bullet.transform.GetChild(0).gameObject
             {       //this.transform.position + Vector3.up * 2.5f + this.transform.forward * -3
                     GameObject bullet1 = Instantiate(bullet, bulletspawn.transform.position, Quaternion.identity);
-                    bullet1.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, -1f) * -750);
+                    bullet1.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 0f, -1f) * -7500);
                     Destroy(bullet1.gameObject, 3);
                     BulletDelay = 0;
                 }
